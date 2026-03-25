@@ -1,0 +1,123 @@
+.bg-light-gray {
+  background-color: var(--brand-white); /* Warm white fits better than gray for this palette */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(0,0,0,0.03);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card.popular {
+  border-color: var(--brand-pink-dark);
+  box-shadow: 0 12px 30px rgba(232, 201, 198, 0.4);
+  transform: translateY(-5px);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 2rem;
+  background-color: var(--brand-pink-dark);
+  color: var(--brand-black);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(232, 201, 198, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.service-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: var(--brand-pink-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-pink-dark);
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover .service-icon-wrapper {
+  background-color: var(--brand-pink-dark);
+  color: var(--brand-white);
+  transform: scale(1.1);
+}
+
+.service-card.popular .service-icon-wrapper {
+  background-color: var(--brand-pink-dark);
+  color: var(--brand-white);
+}
+
+.service-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.service-desc {
+  flex-grow: 1; /* Pushes price to bottom if descriptions vary */
+  font-size: 0.95rem;
+  color: var(--brand-black-light);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.service-footer {
+  margin-top: auto;
+}
+
+.service-price {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.currency {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brand-black-light);
+}
+
+.amount {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--brand-black);
+}
+
+.w-full {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,123 @@
+.footer {
+  background-color: var(--brand-pink-light);
+  color: var(--brand-black-light);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--brand-black);
+}
+
+.footer-section h3 span {
+  color: #cca6a3;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--brand-pink-dark);
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+}
+
+.mock-map {
+  background-color: #ededed;
+  border-radius: var(--radius-md);
+  height: 120px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.mock-map:hover {
+  background-color: #e5e5e5;
+  transform: translateY(-2px);
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--brand-black-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.contact-item svg {
+  color: var(--brand-pink-dark);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links li a {
+  font-size: 0.95rem;
+}
+
+.footer-links li a:hover {
+  color: var(--brand-pink-dark);
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--brand-white);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.9rem;
+  color: var(--brand-black-light);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
